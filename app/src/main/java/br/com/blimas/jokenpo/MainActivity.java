@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
             imagemEscolhaApp.setImageResource(R.drawable.tesoura);
         }
 
-
         TextView resultadoJogo = findViewById(R.id.texto_resultado);
 
+        //verifica ganhador do jogo
         if (
                 (escolhaApp == "Pedra" && escolhaJogador == "Tesoura") ||
                 (escolhaApp == "Papel" && escolhaJogador == "Pedra") ||

@@ -24,49 +24,55 @@
         android:layout_marginTop="28dp"
         android:text="Escolha uma opção abaixo"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/escolha_app"
         app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/escolha_app"
         app:layout_constraintTop_toBottomOf="@+id/escolha_app" />
 
 
     <ImageView
         android:id="@+id/escolha_app"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/padrao" />
 
     <ImageView
         android:id="@+id/escolha_papel"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:onClick="selecionarPapel"
-        app:layout_constraintEnd_toStartOf="@+id/escolha_pedra"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/escolha_pedra"
+        app:layout_constraintEnd_toStartOf="@id/escolha_pedra"
+        app:layout_constraintStart_toStartOf="@+id/texto_escolha_opcao"
         app:layout_constraintTop_toTopOf="@+id/escolha_pedra"
         app:srcCompat="@drawable/papel" />
 
     <ImageView
         android:id="@+id/escolha_pedra"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:onClick="selecionarPedra"
         app:layout_constraintEnd_toStartOf="@+id/escolha_tesoura"
-        app:layout_constraintStart_toEndOf="@id/escolha_papel"
+        app:layout_constraintStart_toEndOf="@+id/escolha_papel"
         app:layout_constraintTop_toBottomOf="@+id/texto_escolha_opcao"
         app:srcCompat="@drawable/pedra" />
 
     <ImageView
         android:id="@+id/escolha_tesoura"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:onClick="selecionarTesoura"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/escolha_pedra"
+        app:layout_constraintEnd_toEndOf="@+id/texto_escolha_opcao"
         app:layout_constraintStart_toEndOf="@+id/escolha_pedra"
         app:layout_constraintTop_toTopOf="@+id/escolha_pedra"
         app:srcCompat="@drawable/tesoura" />
@@ -75,10 +81,14 @@
         android:id="@+id/texto_resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="24dp"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/escolha_tesoura"
         app:layout_constraintStart_toStartOf="@+id/escolha_papel"
         app:layout_constraintTop_toBottomOf="@+id/escolha_pedra"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="Resultado" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
